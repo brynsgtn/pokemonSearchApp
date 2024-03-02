@@ -1,3 +1,7 @@
+// Script
+
+
+// Global Variable Declaration
 const pokemonAPI = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon"
 const searchInputEl = document.getElementById("search-input");
 const searchButtonEl = document.getElementById("search-button");
@@ -6,18 +10,18 @@ const pokemonIdEl = document.getElementById("pokemon-id")
 const weightEl = document.getElementById("weight")
 const heightEl = document.getElementById("height")
 const typesEl = document.getElementById("types")
-
 const imgContainerEl = document.getElementById("img-container")
- const imgEl = document.createElement('img');
-
+const imgEl = document.createElement('img');
 const  hpEl = document.getElementById("hp");
 const  attackEl = document.getElementById("attack");
 const  defenseEl = document.getElementById("defense");
 const  specialAttackEl = document.getElementById("special-attack");
 const  specialDefenseEl = document.getElementById("special-defense");
 const  speedEl = document.getElementById("speed");
- 
 
+
+
+// Function to fetch pokemonAPI 
 const fetchData = async () => {
   try{
     const res = await fetch(pokemonAPI);
@@ -30,12 +34,12 @@ const fetchData = async () => {
 }
 
 
-
+// Function to show Pokemon stats
 const showPokemonStats = (data) => {
   
 const { height, id, name, sprites, stats, types, weight } = data;
   
-  typesEl.innerHTML = ""
+typesEl.innerHTML = ""
 
  pokemonNameEl.innerHTML = name.toUpperCase()
  pokemonIdEl.innerHTML = `#${id}`
@@ -56,61 +60,65 @@ const { height, id, name, sprites, stats, types, weight } = data;
 
  const pokemonTypes = types.map(type => {
     const span = document.createElement('span');
-    span.textContent = type.type.name.toUpperCase();
+    span.innerHTML = `${type.type.name.toUpperCase()}   `;
     return span;
 });
 
 pokemonTypes.forEach(span => typesEl.appendChild(span));
 }
 
-
-
-
-
-
-
-
+// Function to clear input value
 function clearInputValue() {
 searchInputEl.value =" ";
 } 
 
-function removeImgElement() {
-  imgElement.remove()
-}
 
+// Function to show pokemon details
 const showPokemon = (data) => {
     let inputValue = searchInputEl.value.toLowerCase().trim();
     const {results} = data;
     const pokemonNames = results.map(({ name }) => name.toLowerCase());
     const pokemonIds = results.map(({ id }) => id );
     const numericInputValue = parseInt(inputValue);
-
-  // console.log(pokemonNames)
-  // console.log(pokemonIds) 
-  
    
-      if(inputValue === "red") {
+      if(inputValue === "") {
         
         clearInputValue();
-        alert("Pokémon not found") 
+        alert("Input is required!") 
 
       } else if (pokemonNames.includes(inputValue) || pokemonIds.includes(numericInputValue)) {
-        let pokemonURL = pokemonAPI.concat(`/${inputValue}`)
-        const fetchPokemonData = async () => {
-        try{
-          const res = await fetch(pokemonURL);
-          const data = await res.json();
-          showPokemonStats(data)
 
-        } catch (err) {
-          console.log(err)
-        }
+        let pokemonURL = pokemonAPI.concat(`/${inputValue}`)
+
+        clearInputValue();
+
+        // Function to fetch pokemonURL
+        const fetchPokemonData = async () => {
+          try{
+            const res = await fetch(pokemonURL);
+            const data = await res.json();
+            showPokemonStats(data)
+
+          } catch (err) {
+            console.log(err)
+          }
       }
         fetchPokemonData()
+      } else {
+
+        clearInputValue();
+        alert("Pokemon not found!") 
       }
 }
 
-
+// Event listener for search button
  searchButtonEl.addEventListener("click", function () {
    fetchData()
 })
+
+// Event listener for Enter key press
+searchInputEl.addEventListener("keypress", function(event) {
+  if (event.key === 'Enter') {
+    fetchData()
+  }
+});

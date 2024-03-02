@@ -2,64 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Web Responsive Tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheet Link -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Document</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Pokemon Search</title>
 </head>
 <body>
+  <!-- App Content -->
+    <h1 class="header">Pokemon Search App</h1>
     <div class="container">
-        <div>
-            <div>
-                <p>Search for Pokemon Name or ID: </p>
-                <input id="search-input" required></input>
+      <div>
+          <div class="search-content">
+              <p class="search-header">Search for Pokemon Name or ID: </p>
+              <div class="search-bar">
+                <input id="search-input"></input>
                 <button id="search-button">Search</button>
               </div>
+
+            </div>
+            <div class="result-container">
               <div>
-                <p><span id="pokemon-name"></span><span id="pokemon-id"></span></p>
+                <p class="name-id"><span id="pokemon-name"></span><span id="pokemon-id"></span></p>
                 <p><span id="weight"></span><span id="height"></span></p>
-              <div id="img-container">
-        
               </div>
-              <div class="type-container">
-                <p id="types"></p>
-              </div>
-               
-              </div>
-              <div>
-                <table>
-                  <tr>
-                    <th>Base</th>
-                    <th>Stats</th>
-                  </tr>
-                  <tr>
-                    <td>HP:</td>
-                    <td id="hp"></td>
-                  </tr>
-                  <tr>
-                    <td>Attack:</td>
-                    <td id="attack"></td>
-                  </tr>
-                  <tr>
-                    <td>Defense:</td>
-                    <td id="defense"></td>
-                  </tr>
-                  <tr>
-                    <td>Sp. Attack:</td>
-                    <td id="special-attack"></td>
-                  </tr>
-                  <tr>
-                    <td>Sp. Defense:</td>
-                    <td id="special-defense"></td>
-                  </tr>
-                  <tr>
-                    <td>Speed:</td>
-                    <td id="speed"></td>
-                  </tr>
-                </table>
-              </div>
-        </div>
-     
-    </div>
+            <div id="img-container">
+              
+            </div>
+            <div class="type-container">
+              <p id="types"></p>
+            </div>
+             
+            </div>
+            <div>
+              <table>
+                <tr>
+                  <th>Base</th>
+                  <th>Stats</th>
+                </tr>
+                <tr>
+                  <td>HP:</td>
+                  <td id="hp"></td>
+                </tr>
+                <tr>
+                  <td>Attack:</td>
+                  <td id="attack"></td>
+                </tr>
+                <tr>
+                  <td>Defense:</td>
+                  <td id="defense"></td>
+                </tr>
+                <tr>
+                  <td>Sp. Attack:</td>
+                  <td id="special-attack"></td>
+                </tr>
+                <tr>
+                  <td>Sp. Defense:</td>
+                  <td id="special-defense"></td>
+                </tr>
+                <tr>
+                  <td>Speed:</td>
+                  <td id="speed"></td>
+                </tr>
+              </table>
+            </div>
+      </div>
+   
+  </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

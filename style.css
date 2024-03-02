@@ -1,8 +1,25 @@
 
+/* CSS Stylesheet */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
+body {
+    color: #114232;
+    background-color: #114232;
+}
 
-.container {
-    padding: 20% 0;
+ .header {
+    font-size: 35px;
+    color: #F7F6BB;
+    text-align: center;
+    margin: 30px 0;
+ }
+ .container {
+    background-color: #F7F6BB;
+    padding: 15px 15px 0 15px;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -10,20 +27,104 @@
     max-width: 320px;
     width: 100vw;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    border-radius: 5px;
+    border-radius: 24px;
 }
+ .search-content{
+    margin-bottom: 20px;
+ }
+ .search-header {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 18px;
+ }
+
+ .search-bar {
+    text-align: center;
+ }
+
+input {
+    background-color: #F7F6BB;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid #87A922;
+    width: 180px;
+}
+
+
+
+button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 10px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #87A922;
+    border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 
 img {
-    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
 }
 
+.result-container {
+    padding: 15px;
+    height: 310px;
+    background-color: #FCDC2A;
+}
+#pokemon-name, #pokemon-id {
+    font-size: 22px;
+}
+
+#pokemon-name, #weight {
+    margin-right: 10px;
+}
+
+.name-id{
+    margin-bottom: 10px;
+}
+
+#types {
+  
+}
+
+
 table {
-    width: 320px;
+    min-width: 320px;
     text-align: center;
-    background-color: yellow;
+    background-color: #87A922;
+    color: #F7F6BB;
+    font-size: 20px;
+    border: 1px solid #F7F6BB;
+    border-collapse: collapse;
+   
+}
+
+th, td {
+    padding: 5px;
+    border: 5px solid #F7F6BB;
+    border-collapse: collapse;
 }
 
 .type-container{
     display: flex;
     flex-wrap: wrap;
 }
+
