@@ -40,7 +40,7 @@ A deployed version of the Pokémon search app is available on Netlify at [Pokemo
 - HTML
 - CSS
 - JavaScript
-- [Typescript] (https://www.typescriptlang.org/) (TypeScript Documentation) 
+- [Typescript](https://www.typescriptlang.org/) (TypeScript Documentation) 
 - [PokéAPI](https://pokeapi.co/) (for API)
 - [Netlify](https://www.netlify.com/) (for deployment)
 - [GitHub](https://github.com/) (for version control)
