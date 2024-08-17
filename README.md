@@ -1,6 +1,6 @@
 # Pokémon Search App
 
-This project is a Pokémon search app built using HTML, CSS, and JavaScript. It utilizes the PokéAPI through a proxy server to fetch Pokémon data and display it to the user.
+This project is a Pokémon search app built using HTML, CSS, and Javascript then converted to Typescript. It utilizes the PokéAPI through a proxy server to fetch Pokémon data and display it to the user.
 
 ## Features
 
@@ -33,13 +33,14 @@ cd pokemon-search-app
 
 ## Deployed Version
 
-A deployed version of the Pokémon search app is available on Netlify at [https://pokesearchapp.netlify.app/]
+A deployed version of the Pokémon search app is available on Netlify at [Pokemon Search App](https://pokesearchapp.netlify.app/)
 
 ## Technologies Used
 
 - HTML
 - CSS
 - JavaScript
+- [Typescript] (https://www.typescriptlang.org/) (TypeScript Documentation) 
 - [PokéAPI](https://pokeapi.co/) (for API)
 - [Netlify](https://www.netlify.com/) (for deployment)
 - [GitHub](https://github.com/) (for version control)
