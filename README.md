@@ -33,7 +33,7 @@ cd pokemon-search-app
 
 ## Deployed Version
 
-A deployed version of the Pokémon search app is available on Netlify at [pokemon-search-app.netlify.app](https://pokemon-search-app.netlify.app/).
+A deployed version of the Pokémon search app is available on Netlify at [https://pokesearchapp.netlify.app/]
 
 ## Technologies Used
 
