@@ -69,6 +69,7 @@ const fetchData = async (): Promise<void> => {
   }
 }
 
+
 // Function to show Pokémon stats
 const showPokemonStats = (data: PokemonData): void => {
   const { height, id, name, sprites, stats, types, weight } = data;
